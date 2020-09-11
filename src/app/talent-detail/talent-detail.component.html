@@ -1,0 +1,36 @@
+<div *ngIf="getSelectedTalent()" class="card-group">
+  <div class="card">
+    <img class="card-img-top w-50" src="{{getSelectedTalent().thumbnailID}}" alt="Profile Picture">
+    <div class="card-body">
+      <h5 class="card-title">Talent Name</h5>
+      <p class="card-text">{{getSelectedTalent().idolName}}</p>
+      <h5 class="card-title">Channel Name</h5>
+      <p class="card-text"><a href="{{getChannelUrl()+getSelectedTalent().channelID}}">{{getSelectedTalent().channelName}}</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">View Count</h5>
+      <p class="card-text">{{formatNumber(getSelectedTalent().viewCount)}} Views</p>
+
+      <h5 class="card-title">Video Count</h5>
+      <p class="card-text">{{formatNumber(getSelectedTalent().videoCount)}} Videos</p>
+
+      <h5 class="card-title">Subscribers</h5>
+      <p class="card-text">{{formatNumber(getSelectedTalent().subscriberCount)}} Fans</p>
+
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Channel creation</h5>
+      <p class="card-text">{{getSelectedTalent().creationDate}}</p>
+
+      <h5 class="card-title">Twitter Link</h5>
+      <p class="card-text">TODO</p>
+
+      <h5 class="card-title">Hololive Wiki Link</h5>
+      <p class="card-text">TODO</p>
+    </div>
+  </div>
+</div>
