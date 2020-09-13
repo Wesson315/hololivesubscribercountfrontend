@@ -4,19 +4,19 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
       <tr>
-        <th scope="col">Talent Name</th>
-        <th scope="col">Channel Name</th>
-        <th scope="col">Subscriber Count</th>
-        <th scope="col">Informaiton</th>
+        <th class="text-xl-center" scope="col">Talent Name</th>
+        <th class="text-xl-center" scope="col">Channel Name</th>
+        <th class="text-xl-center" scope="col">Subscriber Count</th>
+        <th class="text-xl-center" scope="col">Information</th>
       </tr>
       </thead>
 
       <tbody>
       <tr *ngFor="let talent of talents">
-        <td>{{ talent.idolName }}</td>
-        <td>{{ talent.channelName }}</td>
-        <td>{{ formatSubcount(talent)}} Fans</td>
-        <td><a class="btn btn-primary" (click)="setSelectedTalent(talent); " >Click me</a></td>
+        <td class="text-xl-center">{{ talent.idolName }}</td>
+        <td class="text-xl-center">{{ talent.channelName }}</td>
+        <td class="text-xl-center">{{ formatSubcount(talent)}} Fans</td>
+        <td class="text-xl-center"><a class="btn btn-info" (click)="setSelectedTalent(talent); " >Click me</a></td>
       </tr>
       </tbody>
     </table>
