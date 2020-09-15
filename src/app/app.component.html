@@ -1,18 +1,22 @@
 <div class="container">
   <div class="row-cols-lg-1">
-    <div class="col-md-12">
+    <div class="col-md-12 my-5">
       <div class="card bg-secondary my-5">
         <div class="card-body">
-
-          <h2 class="card-title text-center text-info py-3"><img class="img-fluid w-50" src="assets/Hololive_Logo.png"></h2>
+          <h2 class="card-title text-center text-info py-3"><img alt="Hololive Logo" class="img-fluid w-50" src="assets/Hololive_Logo.png"></h2>
           <h1 class="card-title text-center text-info py-3 display-4 font-weight-bold">{{ title }}</h1>
           <h1 class="card-title text-center text-info py-3 display-4 font-weight-bold">Tracking {{ talentCount }} Talents</h1>
 
         </div>
+
       </div>
-      <app-talent-detail></app-talent-detail>
-      <app-user-list></app-user-list>
-      <router-outlet></router-outlet>
+      <div id="scrollToDetail">
+        <app-talent-detail></app-talent-detail>
+      </div>
+
     </div>
+
+    <app-user-list></app-user-list>
+    <router-outlet></router-outlet>
   </div>
 </div>

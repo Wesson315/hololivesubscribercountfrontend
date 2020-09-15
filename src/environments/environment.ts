@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  SERVER_URL: '//localhost/'
+  SERVER_URL: 'https://localhost:8443/'
 };

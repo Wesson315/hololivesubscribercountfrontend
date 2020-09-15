@@ -1,0 +1,12 @@
+
+.hoverClass{
+  animation-name: changeBG;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes changeBG {
+  0% {background-color: #2e3740}
+  100% {background-color: #5edfed
+  }
+}

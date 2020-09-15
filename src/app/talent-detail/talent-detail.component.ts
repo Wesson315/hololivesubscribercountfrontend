@@ -2,7 +2,18 @@ import {Component, OnInit} from '@angular/core';
 import {Talent} from "../talent";
 import { ActivatedRoute } from '@angular/router';
 import {TalentService} from "../talent.service";
-import {selectedTalent} from "../user-list/user-list.component";
+import {BrowserModule} from "@angular/platform-browser"
+
+export function select(talent: Talent) {
+  this.selectedTalent = talent;
+}
+
+
+export let selectedTalent : Talent;
+
+export function setSelectedTalent(talent : Talent){
+  selectedTalent = talent;
+}
 
 @Component({
   selector: 'app-talent-detail',
@@ -32,6 +43,7 @@ export class TalentDetailComponent implements OnInit{
   public getSelectedTalent() : Talent{
    return selectedTalent;
   }
+
 
 
   getChannelUrl(): string {

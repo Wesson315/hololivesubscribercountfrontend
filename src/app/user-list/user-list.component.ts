@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Talent} from "../talent";
 import {TalentService} from "../talent.service";
+import {BrowserModule} from "@angular/platform-browser"
+import {TalentDetailComponent} from "../talent-detail/talent-detail.component";
+import {TalentCardComponent} from "../talent-card/talent-card.component";
 
-
-
-
-export let selectedTalent : Talent;
+// export let selectedTalent : Talent;
 
 @Component({
   selector: 'app-user-list',
@@ -31,10 +31,12 @@ export class UserListComponent implements OnInit {
   public formatSubcount(talent: Talent): string{
     return Number(talent.subscriberCount).toLocaleString("en");
   }
-
+/*
   public setSelectedTalent(talent : Talent){
     selectedTalent = talent;
     window.scroll(0,0)
   }
+*/
+
 
 }

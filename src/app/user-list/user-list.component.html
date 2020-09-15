@@ -1,26 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let talent of talents; index as i">
+      <app-talent-card [talent]="talent" [rank]="i+1"></app-talent-card>
+    </div>
+  </div>
 
+</div>
+
+<!--
 <div class="card my-5">
   <div class="card-body">
+
+
+
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
-      <tr>
-        <th class="text-xl-center" scope="col">Talent Name</th>
-        <th class="text-xl-center" scope="col">Channel Name</th>
-        <th class="text-xl-center" scope="col">Subscriber Count</th>
-        <th class="text-xl-center" scope="col">Information</th>
-      </tr>
-      </thead>
 
-      <tbody>
-      <tr *ngFor="let talent of talents">
-        <td class="text-xl-center">{{ talent.idolName }}</td>
-        <td class="text-xl-center">{{ talent.channelName }}</td>
-        <td class="text-xl-center">{{ formatSubcount(talent)}} Fans</td>
-        <td class="text-xl-center"><a class="btn btn-info" (click)="setSelectedTalent(talent); " >Click me</a></td>
-      </tr>
+
+
+
+       <tr>
+         <th class="text-xl-center" scope="col">Talent Name</th>
+         <th class="text-xl-center" scope="col">Channel Name</th>
+         <th class="text-xl-center" scope="col">Subscriber Count</th>
+         <th class="text-xl-center" scope="col">Information</th>
+       </tr>
+       </thead>
+
+       <tbody>
+       <tr *ngFor="let talent of talents">
+         <td class="text-xl-center">{{ talent.idolName }}</td>
+         <td class="text-xl-center">{{ talent.channelName }}</td>
+         <td class="text-xl-center">{{ formatSubcount(talent)}} Fans</td>
+         <td class="text-xl-center"><a class="btn btn-info" (click)="setSelectedTalent(talent); " >Click me</a></td>
+       </tr>
       </tbody>
     </table>
   </div>
 </div>
-
+-->
 <!--<app-talent-detail [talent]="talent"></app-talent-detail>-->
