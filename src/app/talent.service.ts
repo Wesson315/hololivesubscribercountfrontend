@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Talent} from './talent';
 import {Observable} from 'rxjs/Observable';
 import {environment} from "../environments/environment";
@@ -13,6 +13,7 @@ export class TalentService {
   private searchTalentUrl: string;
   private getTalentCountUrl: string;
   constructor(private http: HttpClient) {
+
 
     this.allTalentsUrl = this.getUrl("talents");
     this.postTalentUrl = this.getUrl("saveTalent");
@@ -43,6 +44,7 @@ export class TalentService {
     return this.http.get<Number>(this.getTalentCountUrl);
 
   }
+
 
 
 }

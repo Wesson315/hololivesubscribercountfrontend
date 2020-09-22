@@ -3,6 +3,8 @@ import {Talent} from "../talent";
 import { ActivatedRoute } from '@angular/router';
 import {TalentService} from "../talent.service";
 import {BrowserModule} from "@angular/platform-browser"
+import * as main from "../app.component";
+import {viewConstants} from "../../view/viewconstants";
 
 export function select(talent: Talent) {
   this.selectedTalent = talent;
@@ -42,6 +44,10 @@ export class TalentDetailComponent implements OnInit{
   }
   public getSelectedTalent() : Talent{
    return selectedTalent;
+  }
+
+  public setViewTo(view :number){
+      main.cView = viewConstants.DETAIL_PAGE;
   }
 
 

@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="row-cols-lg-1">
+<div [ngSwitch]="getcView()" class="container">
+  <div *ngSwitchCase="1" class="row-cols-lg-1">
     <div class="col-md-12 my-5">
       <div class="card bg-secondary my-5">
         <div class="card-body">

@@ -9,6 +9,7 @@ import {TalentService} from "./talent.service";
 import {TalentDetailComponent} from './talent-detail/talent-detail.component';
 import {Talent} from "./talent";
 import {TalentCardComponent} from './talent-card/talent-card.component';
+import { TalentPageComponent } from './talent-page/talent-page.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {TalentCardComponent} from './talent-card/talent-card.component';
     UserListComponent,
     TalentDetailComponent,
     TalentCardComponent,
+    TalentPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import {TalentCardComponent} from './talent-card/talent-card.component';
     FormsModule,
 
   ],
-  providers: [TalentService, Talent, TalentDetailComponent],
+  providers: [TalentService, Talent, TalentDetailComponent, TalentPageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
