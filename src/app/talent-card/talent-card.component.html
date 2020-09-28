@@ -3,7 +3,7 @@
     <h3 style="color: {{getRankColor()}}">{{rank}}. {{talent.idolName}}</h3>
   </div>
   <div class="card-body">
-    <img class="card-img-top" src="{{talent.thumbnailID}}" alt="Talent{{talent.idolName}} profile picture">
+    <img class="card-img-top" src="{{getThumbnailURL()}}" alt="Talent{{talent.idolName}} profile picture">
     <!--<img class="card-img-top" src="{{talent.thumbnailID}}" alt="Talent{{talent.idolName}} profile picture">-->
   </div>
   <div class="text-xl-center card-footer "><h3>{{formatNumber(talent.subscriberCount)}} Fans</h3></div>

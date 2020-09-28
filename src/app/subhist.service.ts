@@ -36,7 +36,7 @@ export class SubhistService {
     let options = {
       params : httpParams
     }
-    return this.http.get<Array<SubscriberHistory>>(this.fullHistURL, options);
+    return this.http.get<Array<SubscriberHistory>>(this.fullHistURL, {params:{channelID: channelID}});
   }
   /**
    * Gets the full recorded history of hololive channels before a timestamp.

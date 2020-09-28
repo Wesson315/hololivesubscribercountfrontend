@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Talent} from "../talent";
 import * as colors from "../rank-colors";
 import * as talentDetail from "../talent-detail/talent-detail.component";
-
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-talent-card',
@@ -49,5 +49,9 @@ export class TalentCardComponent {
 
   hoverEnd(event) {
     event.target.classList.remove("hoverClass");
+  }
+
+  getThumbnailURL() :string{
+    return environment.SERVER_URL+this.talent.thumbnailID
   }
 }

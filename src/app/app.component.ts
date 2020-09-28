@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core'
 import {TalentService} from "./talent.service";
 import {Talent} from "./talent";
 import * as viewconstants from "../view/viewconstants";
+import { Router } from '@angular/router';
 
 export var cView = viewconstants.currentView;
 @Component({
@@ -19,20 +20,12 @@ export class AppComponent {
   talentCount: Number;
  // cView = viewconstants.currentView;
 
-  constructor(private talentService : TalentService) {
+  constructor(private talentService : TalentService, private router: Router) {
     this.title = 'Subscriber Counter';
    talentService.getTalentCount().subscribe(data =>{
      this.talentCount = data;
+     if(window.location.href.endsWith("/"))this.router.navigateByUrl("/talents")
    });
-  }
-
-  public getcView(): number{
-    return cView;
-  }
-
-  public setcView(newView : number){
-    cView = newView;
-
   }
 
 }

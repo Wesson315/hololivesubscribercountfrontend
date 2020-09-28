@@ -5,6 +5,7 @@ import {TalentService} from "../talent.service";
 import {BrowserModule} from "@angular/platform-browser"
 import * as main from "../app.component";
 import {viewConstants} from "../../view/viewconstants";
+import {environment} from "../../environments/environment";
 
 export function select(talent: Talent) {
   this.selectedTalent = talent;
@@ -46,11 +47,9 @@ export class TalentDetailComponent implements OnInit{
    return selectedTalent;
   }
 
-  public setViewTo(view :number){
-      main.cView = viewConstants.DETAIL_PAGE;
+  getThumbnailURL() :string{
+    return environment.SERVER_URL+selectedTalent.thumbnailID
   }
-
-
 
   getChannelUrl(): string {
     if(selectedTalent.channelID.startsWith("U")){

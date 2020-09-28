@@ -1,14 +1,23 @@
-<div [ngSwitch]="getcView()" class="container">
-  <div *ngSwitchCase="1" class="row-cols-lg-1">
+<div class="row">
+  <div class="col-10">
+  </div>
+  <div class="col-2"><p class="text-light">Holocounter by Wesson Snyder</p></div>
+</div>
+<div class="row">
+  <div class="col-10">
+  </div>
+  <div class="col-1"><p class="text-light"><a class="text-info" target="_blank" href="https://github.com/Wesson315/hololivesubscribercount">Github</a></p></div>
+  <div class="col-1"><p class="text-light"><a class="text-info" target="_blank" href="https://twitter.com/WessonSnyder">@WessonSnyder</a></p></div>
+</div>
+<div class="container">
+  <div class="row-cols-lg-1">
     <div class="col-md-12 my-5">
       <div class="card bg-secondary my-5">
         <div class="card-body">
           <h2 class="card-title text-center text-info py-3"><img alt="Hololive Logo" class="img-fluid w-50" src="assets/Hololive_Logo.png"></h2>
           <h1 class="card-title text-center text-info py-3 display-4 font-weight-bold">{{ title }}</h1>
           <h1 class="card-title text-center text-info py-3 display-4 font-weight-bold">Tracking {{ talentCount }} Talents</h1>
-
         </div>
-
       </div>
       <div id="scrollToDetail">
         <app-talent-detail></app-talent-detail>
@@ -16,7 +25,6 @@
 
     </div>
 
-    <app-user-list></app-user-list>
     <router-outlet></router-outlet>
   </div>
 </div>

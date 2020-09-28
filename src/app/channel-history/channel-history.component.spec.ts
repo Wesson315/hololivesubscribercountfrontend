@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TalentPageComponent } from './talent-page.component';
+import { ChannelHistoryComponent } from './channel-history.component';
 
-describe('TalentPageComponent', () => {
-  let component: TalentPageComponent;
-  let fixture: ComponentFixture<TalentPageComponent>;
+describe('ChannelHistoryComponent', () => {
+  let component: ChannelHistoryComponent;
+  let fixture: ComponentFixture<ChannelHistoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TalentPageComponent ]
+      declarations: [ ChannelHistoryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TalentPageComponent);
+    fixture = TestBed.createComponent(ChannelHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,11 +1,11 @@
 <div *ngIf="getSelectedTalent()" class="card-group">
   <div class="card">
-    <img class="card-img-top w-50" src="{{getSelectedTalent().thumbnailID}}" alt="{{getSelectedTalent().idolName}} Profile Picture">
+    <img class="card-img-top w-50" src="{{getThumbnailURL()}}" alt="{{getSelectedTalent().idolName}} Profile Picture">
     <div class="card-body">
       <h5 class="card-title">Talent Name</h5>
       <p class="card-text">{{getSelectedTalent().idolName}}</p>
       <h5 class="card-title">Channel Name</h5>
-      <p class="card-text"><a target="_blank" class="text-info" href="{{getChannelUrl()+getSelectedTalent().channelID}}">{{getSelectedTalent().channelName}}</a>
+      <p class="card-text"><a target="_blank" href="{{getChannelUrl()+getSelectedTalent().channelID}}">{{getSelectedTalent().channelName}}</a>
     </div>
   </div>
   <div class="card">
@@ -17,8 +17,8 @@
       <p class="card-text">{{formatNumber(getSelectedTalent().videoCount)}} Videos</p>
 
       <h5 class="card-title">Subscribers</h5>
-      <p class="card-text"><a [routerLink]="['/talentPage', getSelectedTalent().channelID]" (click)="setViewTo(2)" >{{formatNumber(getSelectedTalent().subscriberCount)}}Fans</a></p>
-
+      <p class="card-text">{{formatNumber(getSelectedTalent().subscriberCount)}} Fans</p>
+      <a class="btn btn-light text-dark" routerLink="/channelhist" routerLinkActive="active">Click to see subscriber history</a>
     </div>
   </div>
   <div class="card">
@@ -33,5 +33,5 @@
       <p class="card-text">TODO</p>
     </div>
   </div>
-  <router-outlet></router-outlet>
+
 </div>
