@@ -11,5 +11,7 @@ export class Talent {
   subscriberCount: number;
   viewCount: number;
   videoCount: number;
+  twitterLink: string;
+  wikiLink: string;
 
 }

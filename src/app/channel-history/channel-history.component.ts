@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {selectedTalent} from "../talent-detail/talent-detail.component";
 import {Talent} from "../talent";
 import {SubhistService} from "../subhist.service";
-import {chartData} from "./data";
+import {chartData, clearChart} from "./data";
 import * as d3 from 'd3';
 
 @Component({
@@ -40,6 +40,7 @@ export class ChannelHistoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSubService().getFullHistory(this.getSelectedTalent().channelID).subscribe(data => {
+      clearChart();
       this.recordingTime = this.formatDate(data[0].snapshotTime)
       this.maxEntry = {"name": this.formatDate(data[0].snapshotTime), "value": data[0].subscriberCount}
       let dataObj = {"name": "Fans", "series": []};
@@ -52,7 +53,6 @@ export class ChannelHistoryComponent implements OnInit {
       }
       chartData.push(dataObj)
       Object.assign(this, {chartData})
-      console.log()
     });
 
   }

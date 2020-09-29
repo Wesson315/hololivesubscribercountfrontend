@@ -1,4 +1,8 @@
 
+export function clearChart() {
+chartData = [];
+}
+
 export var chartData = []
 /*
 

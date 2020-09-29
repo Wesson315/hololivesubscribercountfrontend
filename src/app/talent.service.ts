@@ -15,11 +15,11 @@ export class TalentService {
   constructor(private http: HttpClient) {
 
 
-    this.allTalentsUrl = this.getUrl("talents");
-    this.postTalentUrl = this.getUrl("saveTalent");
-    this.talentUrl = this.getUrl("talentDetail/");
-    this.searchTalentUrl = this.getUrl("findByName/");
-    this.getTalentCountUrl = this.getUrl("getTalentCount");
+    this.allTalentsUrl = this.getUrl("api/talents/talents");
+    this.postTalentUrl = this.getUrl("api/talents/saveTalent");
+    this.talentUrl = this.getUrl("api/talents/talentDetail/");
+    this.searchTalentUrl = this.getUrl("api/talents/findByName/");
+    this.getTalentCountUrl = this.getUrl("api/talents/getTalentCount");
 
   }
 

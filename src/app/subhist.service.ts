@@ -16,10 +16,10 @@ export class SubhistService {
   private betweenHistURL: string;
 
   constructor(private http: HttpClient) {
-    this.fullHistURL = this.getUrl("subhist")
-    this.beforeHistURL = this.getUrl("subhist/before")
-    this.afterHistURL = this.getUrl("subhist/after")
-    this.betweenHistURL = this.getUrl("subhist/between")
+    this.fullHistURL = this.getUrl("api/subhist/hist")
+    this.beforeHistURL = this.getUrl("api/subhist/before")
+    this.afterHistURL = this.getUrl("api/subhist/after")
+    this.betweenHistURL = this.getUrl("api/subhist/between")
   }
 
   private getUrl(appendix: string): string {
